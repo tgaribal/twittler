@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Twittler</title>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="twittler.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script>
+    <header class="group">
+      <h1>WELCOME TO TWITTLER!</h>
+    </header>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+    <section class="user-input group">
+      <h3>Send a Twittle:</h3>
+      <form class="input">
+        <input class="twittle" type="text" placeholder="Send a Twittle to join the conversation">
+        <input class="button" type ="submit" value="Twittle">
+      </form> 
+    </section>
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+    <section class="group">
+      <h3>User Feed:</h3>
+      <div class='user-feed'></div>
+    </section>
 
-      });
-
-    </script>
+    <footer class="group">
+    </footer>
   </body>
 </html>

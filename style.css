@@ -1,0 +1,189 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+  ========================================
+  Styling
+  ========================================
+*/
+
+body {
+	background: #e2e5e7;
+}
+h3 {
+	font-size: 22px;
+	color: #000080;
+	font: normal bold 22px/26px Tahoma, Geneva, sans-serif;
+	width: 50%;
+	margin: 0 auto;
+}
+/*
+  ========================================
+  Header
+  ========================================
+*/
+header h1 {
+	float: left;
+	position: relative;
+	color: #293f50;
+	font: normal 30px/45px Tahoma, Geneva, sans-serif;
+}
+/*
+  ========================================
+  User Input
+  ========================================
+*/
+form {
+	width: 50%;
+	margin: 0 auto;
+}
+.twittle {
+	padding: 8px;
+	background: #fff;
+	border-radius: 5px;
+	height: 5em;
+	width: 100%;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	text-align: top;
+}
+
+.button {
+	color: #fff;
+	background: #000080;
+	border-radius: 5px;
+	width: 80px;
+	height: 40px;
+	float: right;
+	margin: 10px 0;
+	font: normal 15px/20px Tahoma, Geneva, sans-serif;
+}
+
+
+.highlighted{
+	color: #000080;
+	background: #fff;
+	cursor: pointer;
+}
+.hidden {
+	visibility: hidden;
+}
+.displayed {
+	visibility: visible ;
+}
+
+/*
+  ========================================
+  Feed
+  ========================================
+*/
+
+.tweet {
+	width: 50%;
+	padding: 8px;
+	border: 1px solid #4863A0;
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	background: #f0f1f2;
+	box-sizing: border-box;
+}
+
+.handle {
+	color: #000080;
+	font: normal bold 16px/20px Tahoma, Geneva, sans-serif;
+	float: left;
+	padding-bottom: 2px;
+}
+.handle:hover {
+	cursor: pointer;
+}
+.message {
+	float: right;
+	padding: 5px;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid lightgrey;
+	height: 3em;
+	width: 95%;
+	overflow-y: scroll;
+}
+
+.time {
+	font: italic lighter 10px/10px Tahoma, Geneva, sans-serif;
+	float: right;
+	padding-top: 2px;
+	right: 2px;
+	bottom: 2px;
+
+}
+
+
+
+
+

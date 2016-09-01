@@ -82,26 +82,40 @@ h3 {
 	width: 50%;
 	margin: 0 auto;
 }
+button {
+	color: #fff;
+	background: #000080;
+	border-radius: 5px;	
+	float: right;
+	margin: 10px 0;
+	font: normal 15px/20px Tahoma, Geneva, sans-serif;
+}
+form {
+	width: 50%;
+	margin: 0 auto;
+}
+header h1 {
+	float: left;
+	position: relative;
+	left: 25%;
+	color: #293f50;
+	font: normal 30px/45px Tahoma, Geneva, sans-serif;
+}
 /*
   ========================================
   Header
   ========================================
 */
-header h1 {
-	float: left;
+.load-more {
 	position: relative;
-	color: #293f50;
-	font: normal 30px/45px Tahoma, Geneva, sans-serif;
+	right: 25%;
 }
 /*
   ========================================
   User Input
   ========================================
 */
-form {
-	width: 50%;
-	margin: 0 auto;
-}
+
 .twittle {
 	padding: 8px;
 	background: #fff;
@@ -112,18 +126,6 @@ form {
 	box-sizing: border-box;
 	text-align: top;
 }
-
-.button {
-	color: #fff;
-	background: #000080;
-	border-radius: 5px;
-	width: 80px;
-	height: 40px;
-	float: right;
-	margin: 10px 0;
-	font: normal 15px/20px Tahoma, Geneva, sans-serif;
-}
-
 
 .highlighted{
 	color: #000080;
@@ -177,10 +179,10 @@ form {
 .time {
 	font: italic lighter 10px/10px Tahoma, Geneva, sans-serif;
 	float: right;
+	position: relative;
 	padding-top: 2px;
 	right: 2px;
 	bottom: 2px;
-
 }
 
 

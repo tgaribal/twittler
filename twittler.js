@@ -36,17 +36,17 @@ $(document).ready(function(){
 
   //Clicking "Load More Twittles" will refresh the feed with all posts
   $('.load-more').on('click', function (event){
-    createPosts();
+    createFeed();
   });
 
   // //Clicking "Welcome to Twittler" will refresh the feed with all posts
   $('header h1').on('click', function (event){
-    createPosts();
+    createFeed();
   });
 
   
 
-  
+
 
   //Users can add their own twittles
   $('.add-twittle').on('click', function (event) {

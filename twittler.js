@@ -1,46 +1,76 @@
 $(document).ready(function(){
+  
 
-  var createPosts = function () {
+  //Build the feed
+  var createFeed = function (handle) {
     var $feed = $('.user-feed');  
-    $feed.empty();
     var index = streams.home.length - 1;
+
+    $feed.empty();
     while(index >= 0){
       var tweet = streams.home[index];
-      var $tweet = $('<div class="tweet group"></div>');
-      $tweet.html('<div class="handle"><a data-user='+tweet.user+'>@' + tweet.user + ':</a></div> <div class="message">' + tweet.message +'</div> <div class="time">'+tweet.created_at+'</div>');
-      $tweet.appendTo($feed);
-      index -= 1;
+      if (handle === undefined) {
+        buildTweet(tweet);
+      } else if (handle === tweet.user) {
+        buildTweet(tweet);
+      }
+      index -= 1;   
     }
+    $('.handle').on('click', function (event) {
+      createFeed($(this).data("user"))
+    })
   }
-  createPosts();
-
-  $('.load-more').on('click', createPosts);
-
-  $('.add-twittle').on('click', function (event) {
-    event.preventDefault();
-    var input = $('.twittle').val();
-    //writeTweet(input);
+  //build individual tweets
+  var buildTweet = function (tweet) {
     var $tweet = $('<div class="tweet group"></div>');
+    $tweet.html('<div class="handle" data-user="'+tweet.user+'">@' + tweet.user + ':</div> <div class="message">' + tweet.message +'</div> <div class="time">'+tweet.created_at+'</div>');
+    $tweet.appendTo('.user-feed');
+  }
+
+
+
+
+
+  // Initialitze the feed with the first twittles
+  createFeed();
+
+  //Clicking "Load More Twittles" will refresh the feed with all posts
+  $('.load-more').on('click', function (event){
+    createPosts();
+  });
+
+  // //Clicking "Welcome to Twittler" will refresh the feed with all posts
+  $('header h1').on('click', function (event){
+    createPosts();
+  });
+
+  
+
+  
+
+  //Users can add their own twittles
+  $('.add-twittle').on('click', function (event) {
+    //event.preventDefault();
+    var input = $('.twittle').val();
     if (input.length===0) {
       alert("Enter a Twittle to join the noise")
     } else {
-      $tweet.html('<div class="handle"><a data-user=tgaribaldi>@tgaribaldi:</a></div> <div class="message">' + input +'</div> <div class="time">timestamp</div>');
+      var $tweet = $('<div class="tweet group"></div>');
+      $tweet.html('<div class="handle" data-user="guest">@guest:</div> <div class="message">' + input +'</div> <div class="time">timestamp</div>');
       $tweet.prependTo('.user-feed');
     }
   })
 
-  $('.handle').on('click', function() {
-    alert('click')
-  })
 
+
+
+  //using jquery to set the mouseover for buttons
   $('.button').on('mouseover', function(){
     $(this).addClass('highlighted')
   })
-
   $('.button').on('mouseleave', function() {
     $(this).removeClass('highlighted')
   })
-
 });
 
 

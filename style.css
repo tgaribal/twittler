@@ -101,6 +101,10 @@ header h1 {
 	color: #293f50;
 	font: normal 30px/45px Tahoma, Geneva, sans-serif;
 }
+a {
+	text-decoration: none;
+	color: #000080;
+}
 /*
   ========================================
   Header
@@ -179,7 +183,6 @@ header h1 {
 .time {
 	font: italic lighter 10px/10px Tahoma, Geneva, sans-serif;
 	float: right;
-	position: relative;
 	padding-top: 2px;
 	right: 2px;
 	bottom: 2px;

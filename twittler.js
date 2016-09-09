@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  
+  window.visitor = "tgaribaldi"
+  streams.users.tgaribaldi = [];
 
   //Build the feed
   var createFeed = function (handle) {
@@ -50,14 +51,14 @@ $(document).ready(function(){
 
   //Users can add their own twittles
   $('.add-twittle').on('click', function (event) {
-    //event.preventDefault();
-    var input = $('.twittle').val();
+    var input = $(".twittle").val();
     if (input.length===0) {
       alert("Enter a Twittle to join the noise")
     } else {
-      var $tweet = $('<div class="tweet group"></div>');
-      $tweet.html('<div class="handle" data-user="guest">@guest:</div> <div class="message">' + input +'</div> <div class="time">timestamp</div>');
-      $tweet.prependTo('.user-feed');
+    	writeTweet(input);
+    	createFeed();
+    	$(".twittle").val("")
+
     }
   })
 

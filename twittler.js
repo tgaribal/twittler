@@ -51,6 +51,7 @@ $(document).ready(function(){
 
   //Users can add their own twittles
   $('.add-twittle').on('click', function (event) {
+    event.preventDefault();
     var input = $(".twittle").val();
     if (input.length===0) {
       alert("Enter a Twittle to join the noise")
@@ -58,7 +59,6 @@ $(document).ready(function(){
     	writeTweet(input);
     	createFeed();
     	$(".twittle").val("")
-
     }
   })
 
